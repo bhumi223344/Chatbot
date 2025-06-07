@@ -54,7 +54,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SidebarProvider>
-            <div className="flex h-full">
+            <div className="flex h-screen"> {/* use h-screen instead of h-full */}
               {/* Sidebar */}
               <AppSidebar />
 
@@ -66,7 +66,7 @@ export default function RootLayout({
                 </div>
 
                 {/* Scrollable content */}
-                <main className="flex-1 overflow-y-auto p-4">
+                <main className="flex-1 min-h-0 overflow-y-auto p-4"> {/* add min-h-0 */}
                   <SidebarTrigger />
                   {children}
                 </main>
@@ -78,6 +78,11 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+
+
 
 
 
