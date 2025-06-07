@@ -22,6 +22,8 @@ const MODELS = [
 type ChatDemoProps = {
   initialMessages?: UseChatOptions["initialMessages"]
 }
+
+
  
 export function ChatDemo(props: ChatDemoProps) {
   const [selectedModel, setSelectedModel] = useState(MODELS[0].id)
